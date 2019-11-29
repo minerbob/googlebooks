@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div>
         <NavTabs />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Search} />
         <Route exact path="/search" component={Search} />
         <Route exact path="/saved" component={Saved} />
         <Route path="/contact" component={Contact} />
