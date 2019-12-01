@@ -1,16 +1,33 @@
 import React from "react";
+import { Col, Row, Container } from "../../components/Grid";
+import { List, ListItem } from "../../components/List";
 
-function Saved() {
+
+
+function Saved(props) {
+  console.log("This is: " + props.books);
   return (
     <div>
       <h1>Saved</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui
-        mauris, ut interdum nunc egestas sed. Aenean sed mollis diam. Nunc aliquet risus ac finibus
-        porta. Nam quis arcu non lectus tincidunt fermentum. Suspendisse aliquet orci porta quam
-        semper imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed
-        rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
+      <Col size="md-6 sm-12">
+            {props.books.length ? (
+              <List>
+                {props.books.map(book => {
+                  return (
+                    <ListItem key={book._id}>
+                      <a href={"/books/" + book._id}>
+                        <strong>
+                          {book.title} by {book.author}
+                        </strong>
+                      </a>
+                    </ListItem>
+                  );
+                })}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+          </Col>
     </div>
   );
 }

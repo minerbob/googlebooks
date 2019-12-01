@@ -28,27 +28,11 @@ function NavTabs() {
           Saved
         </Link>
       </li>
-      <li className="nav-item">
-        <Link
-          to="/contact"
-          className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"}
-        >
-          Contact
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link
-          to="/contact/learn"
-          className={window.location.pathname === "/contact/learn" ? "nav-link active" : "nav-link"}
-        >
-          Learn
-        </Link>
-      </li>
     </ul>
 
-<div class="jumbotron">
-<h1 class="display-4">(React) Google Books Search</h1>
-<h1 class="display-10">Search for and Save Books of Intrest</h1>
+<div className="jumbotron">
+<h1 className="display-4">(React) Google Books Search</h1>
+<h1 className="display-10">Search for and Save Books of Intrest</h1>
 </div>
 </div>
 
